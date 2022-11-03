@@ -9,6 +9,6 @@ RUN mkdir texlive && cd texlive && wget http://mirror.ctan.org/systems/texlive/t
 
 # using installation profile http://tug.org/texlive/quickinstall.html
 ADD texlive.profile texlive/
-RUN cd texlive/* && ./install-tl --profile ../texlive.profile
+RUN cd texlive/* && ./install-tl --no-interaction --profile ../texlive.profile
 
 ENV PATH="/usr/local/texlive/2022/bin/x86_64-linux/:$PATH"
