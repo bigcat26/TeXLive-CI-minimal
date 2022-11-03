@@ -1,8 +1,8 @@
-FROM ubuntu:latest
+FROM alpine:3.16
 
 # update the system
-RUN apt-get -qq update
-RUN apt-get -y -q install wget perl python
+RUN apk update && apk upgrade
+RUN apk add --no-cache wget perl python
 
 # get texlive from http://tug.org/texlive/acquire-netinstall.html
 RUN mkdir texlive && cd texlive && wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz -O- | tar zxf - && cd *
