@@ -27,3 +27,7 @@ RUN tlmgr init-usertree && \
 
 # https://texfaq.org/FAQ-formatstymy
 RUN fmtutil -sys --all
+
+WORKDIR /root
+
+ENTRYPOINT [ "xelatex" ]
