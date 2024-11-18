@@ -23,6 +23,7 @@ RUN tlmgr init-usertree && \
     tlmgr install xltxtra && \
     tlmgr install realscripts && \
     tlmgr install setspace && \
+    tlmgr install fullpage && \
     tlmgr install cite
 
 # https://texfaq.org/FAQ-formatstymy
