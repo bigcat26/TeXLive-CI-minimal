@@ -1,4 +1,4 @@
-FROM alpine:3.20
+FROM alpine:3
 
 # update the system
 RUN apk update && apk upgrade
