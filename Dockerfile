@@ -11,7 +11,7 @@ RUN mkdir texlive && cd texlive && wget http://mirror.ctan.org/systems/texlive/t
 ADD texlive.profile texlive/
 RUN cd texlive/* && ./install-tl --no-interaction --profile ../texlive.profile
 
-ENV PATH="/usr/local/texlive/2022/bin/x86_64-linuxmusl:$PATH"
+ENV PATH="/usr/local/texlive/2024/bin/x86_64-linuxmusl:$PATH"
 RUN tlmgr init-usertree && \
     tlmgr install xifthen && \
     tlmgr install ifmtarg && \
